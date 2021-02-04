@@ -3,10 +3,11 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
+		15055AEA25CB60B1003A3B01 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 15055AE925CB60B1003A3B01 /* GoogleService-Info.plist */; };
 		1555CE1325CB556100B71D0E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1555CE1225CB556100B71D0E /* AppDelegate.swift */; };
 		1555CE1525CB556100B71D0E /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1555CE1425CB556100B71D0E /* SceneDelegate.swift */; };
 		1555CE1725CB556100B71D0E /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1555CE1625CB556100B71D0E /* ViewController.swift */; };
@@ -14,9 +15,24 @@
 		1555CE1D25CB556100B71D0E /* chunyang_tea.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 1555CE1B25CB556100B71D0E /* chunyang_tea.xcdatamodeld */; };
 		1555CE1F25CB556300B71D0E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1555CE1E25CB556300B71D0E /* Assets.xcassets */; };
 		1555CE2225CB556300B71D0E /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1555CE2025CB556300B71D0E /* LaunchScreen.storyboard */; };
+		15EC5A5225CB728A008BCF50 /* MenuVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15EC5A5125CB728A008BCF50 /* MenuVC.swift */; };
+		15EC5A6725CBA6C9008BCF50 /* CoreDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15EC5A6625CBA6C9008BCF50 /* CoreDataManager.swift */; };
+		15EC5A6925CBADD2008BCF50 /* FirebaseHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15EC5A6825CBADD2008BCF50 /* FirebaseHelper.swift */; };
+		15EC5A7225CBB421008BCF50 /* PostOrder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15EC5A6D25CBB421008BCF50 /* PostOrder.swift */; };
+		15EC5A7425CBB421008BCF50 /* CartItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15EC5A6F25CBB421008BCF50 /* CartItem.swift */; };
+		15EC5A7525CBB421008BCF50 /* DrinkData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15EC5A7025CBB421008BCF50 /* DrinkData.swift */; };
+		15EC5A7625CBB421008BCF50 /* Enums.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15EC5A7125CBB421008BCF50 /* Enums.swift */; };
+		15EC5A7825CC3CF9008BCF50 /* MenuTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15EC5A7725CC3CF9008BCF50 /* MenuTableViewCell.swift */; };
+		15EC5A7A25CC4D68008BCF50 /* DetailVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15EC5A7925CC4D68008BCF50 /* DetailVC.swift */; };
+		15EC5A7C25CC54DB008BCF50 /* OptionSelectCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15EC5A7B25CC54DB008BCF50 /* OptionSelectCell.swift */; };
+		15EC5A7E25CC5552008BCF50 /* OptionCheckCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15EC5A7D25CC5552008BCF50 /* OptionCheckCell.swift */; };
+		15EC5A8025CC71B6008BCF50 /* ShoppingCartVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15EC5A7F25CC71B6008BCF50 /* ShoppingCartVC.swift */; };
+		15EC5A8325CC7421008BCF50 /* SharedData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15EC5A8225CC7421008BCF50 /* SharedData.swift */; };
+		8625C0378F787052EED10FF6 /* Pods_chunyang_tea.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 58C25B2330CDF8080956B6E5 /* Pods_chunyang_tea.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		15055AE925CB60B1003A3B01 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "GoogleService-Info.plist"; path = "../../../GoogleService-Info.plist"; sourceTree = "<group>"; };
 		1555CE0F25CB556100B71D0E /* chunyang-tea.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "chunyang-tea.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		1555CE1225CB556100B71D0E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		1555CE1425CB556100B71D0E /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -26,6 +42,22 @@
 		1555CE1E25CB556300B71D0E /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		1555CE2125CB556300B71D0E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		1555CE2325CB556300B71D0E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		15EC5A5125CB728A008BCF50 /* MenuVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuVC.swift; sourceTree = "<group>"; };
+		15EC5A6625CBA6C9008BCF50 /* CoreDataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataManager.swift; sourceTree = "<group>"; };
+		15EC5A6825CBADD2008BCF50 /* FirebaseHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirebaseHelper.swift; sourceTree = "<group>"; };
+		15EC5A6D25CBB421008BCF50 /* PostOrder.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PostOrder.swift; sourceTree = "<group>"; };
+		15EC5A6F25CBB421008BCF50 /* CartItem.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CartItem.swift; sourceTree = "<group>"; };
+		15EC5A7025CBB421008BCF50 /* DrinkData.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DrinkData.swift; sourceTree = "<group>"; };
+		15EC5A7125CBB421008BCF50 /* Enums.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Enums.swift; sourceTree = "<group>"; };
+		15EC5A7725CC3CF9008BCF50 /* MenuTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuTableViewCell.swift; sourceTree = "<group>"; };
+		15EC5A7925CC4D68008BCF50 /* DetailVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailVC.swift; sourceTree = "<group>"; };
+		15EC5A7B25CC54DB008BCF50 /* OptionSelectCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OptionSelectCell.swift; sourceTree = "<group>"; };
+		15EC5A7D25CC5552008BCF50 /* OptionCheckCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OptionCheckCell.swift; sourceTree = "<group>"; };
+		15EC5A7F25CC71B6008BCF50 /* ShoppingCartVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShoppingCartVC.swift; sourceTree = "<group>"; };
+		15EC5A8225CC7421008BCF50 /* SharedData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SharedData.swift; sourceTree = "<group>"; };
+		58C25B2330CDF8080956B6E5 /* Pods_chunyang_tea.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_chunyang_tea.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		D3327240C8F1CFF48535999B /* Pods-chunyang-tea.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-chunyang-tea.release.xcconfig"; path = "Target Support Files/Pods-chunyang-tea/Pods-chunyang-tea.release.xcconfig"; sourceTree = "<group>"; };
+		FFD98AB0763CC6CB72F6CEAA /* Pods-chunyang-tea.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-chunyang-tea.debug.xcconfig"; path = "Target Support Files/Pods-chunyang-tea/Pods-chunyang-tea.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -33,6 +65,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8625C0378F787052EED10FF6 /* Pods_chunyang_tea.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -44,6 +77,8 @@
 			children = (
 				1555CE1125CB556100B71D0E /* chunyang-tea */,
 				1555CE1025CB556100B71D0E /* Products */,
+				572A5013806DC3853165D654 /* Pods */,
+				1B5EA1CB73AF509CFB68FDB0 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -58,16 +93,87 @@
 		1555CE1125CB556100B71D0E /* chunyang-tea */ = {
 			isa = PBXGroup;
 			children = (
+				15EC5A8125CC7407008BCF50 /* TempData */,
+				15EC5A6C25CBB371008BCF50 /* Model */,
+				15EC5A5725CB9A64008BCF50 /* Helper */,
+				15EC5A5625CB9A43008BCF50 /* View */,
+				15EC5A5525CB9A21008BCF50 /* VC */,
 				1555CE1225CB556100B71D0E /* AppDelegate.swift */,
 				1555CE1425CB556100B71D0E /* SceneDelegate.swift */,
-				1555CE1625CB556100B71D0E /* ViewController.swift */,
-				1555CE1825CB556100B71D0E /* Main.storyboard */,
 				1555CE1E25CB556300B71D0E /* Assets.xcassets */,
+				1555CE1825CB556100B71D0E /* Main.storyboard */,
 				1555CE2025CB556300B71D0E /* LaunchScreen.storyboard */,
 				1555CE2325CB556300B71D0E /* Info.plist */,
+				15055AE925CB60B1003A3B01 /* GoogleService-Info.plist */,
 				1555CE1B25CB556100B71D0E /* chunyang_tea.xcdatamodeld */,
 			);
 			path = "chunyang-tea";
+			sourceTree = "<group>";
+		};
+		15EC5A5525CB9A21008BCF50 /* VC */ = {
+			isa = PBXGroup;
+			children = (
+				1555CE1625CB556100B71D0E /* ViewController.swift */,
+				15EC5A5125CB728A008BCF50 /* MenuVC.swift */,
+				15EC5A7925CC4D68008BCF50 /* DetailVC.swift */,
+				15EC5A7F25CC71B6008BCF50 /* ShoppingCartVC.swift */,
+			);
+			path = VC;
+			sourceTree = "<group>";
+		};
+		15EC5A5625CB9A43008BCF50 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				15EC5A7D25CC5552008BCF50 /* OptionCheckCell.swift */,
+				15EC5A7B25CC54DB008BCF50 /* OptionSelectCell.swift */,
+				15EC5A7725CC3CF9008BCF50 /* MenuTableViewCell.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		15EC5A5725CB9A64008BCF50 /* Helper */ = {
+			isa = PBXGroup;
+			children = (
+				15EC5A6625CBA6C9008BCF50 /* CoreDataManager.swift */,
+				15EC5A6825CBADD2008BCF50 /* FirebaseHelper.swift */,
+			);
+			path = Helper;
+			sourceTree = "<group>";
+		};
+		15EC5A6C25CBB371008BCF50 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				15EC5A7025CBB421008BCF50 /* DrinkData.swift */,
+				15EC5A7125CBB421008BCF50 /* Enums.swift */,
+				15EC5A6F25CBB421008BCF50 /* CartItem.swift */,
+				15EC5A6D25CBB421008BCF50 /* PostOrder.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		15EC5A8125CC7407008BCF50 /* TempData */ = {
+			isa = PBXGroup;
+			children = (
+				15EC5A8225CC7421008BCF50 /* SharedData.swift */,
+			);
+			path = TempData;
+			sourceTree = "<group>";
+		};
+		1B5EA1CB73AF509CFB68FDB0 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				58C25B2330CDF8080956B6E5 /* Pods_chunyang_tea.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		572A5013806DC3853165D654 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				FFD98AB0763CC6CB72F6CEAA /* Pods-chunyang-tea.debug.xcconfig */,
+				D3327240C8F1CFF48535999B /* Pods-chunyang-tea.release.xcconfig */,
+			);
+			path = Pods;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -77,9 +183,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 1555CE2625CB556300B71D0E /* Build configuration list for PBXNativeTarget "chunyang-tea" */;
 			buildPhases = (
+				0CCEB6035115FEA5B5AC5E1C /* [CP] Check Pods Manifest.lock */,
 				1555CE0B25CB556100B71D0E /* Sources */,
 				1555CE0C25CB556100B71D0E /* Frameworks */,
 				1555CE0D25CB556100B71D0E /* Resources */,
+				95AC7F01BBC7C220AB5A0351 /* [CP] Embed Pods Frameworks */,
+				31518AF20E41CEA7A6E28155 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -128,6 +237,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				1555CE2225CB556300B71D0E /* LaunchScreen.storyboard in Resources */,
+				15055AEA25CB60B1003A3B01 /* GoogleService-Info.plist in Resources */,
 				1555CE1F25CB556300B71D0E /* Assets.xcassets in Resources */,
 				1555CE1A25CB556100B71D0E /* Main.storyboard in Resources */,
 			);
@@ -135,15 +245,87 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		0CCEB6035115FEA5B5AC5E1C /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-chunyang-tea-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		31518AF20E41CEA7A6E28155 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-chunyang-tea/Pods-chunyang-tea-resources-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Copy Pods Resources";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-chunyang-tea/Pods-chunyang-tea-resources-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-chunyang-tea/Pods-chunyang-tea-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		95AC7F01BBC7C220AB5A0351 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-chunyang-tea/Pods-chunyang-tea-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-chunyang-tea/Pods-chunyang-tea-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-chunyang-tea/Pods-chunyang-tea-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		1555CE0B25CB556100B71D0E /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				15EC5A7225CBB421008BCF50 /* PostOrder.swift in Sources */,
+				15EC5A6925CBADD2008BCF50 /* FirebaseHelper.swift in Sources */,
+				15EC5A7825CC3CF9008BCF50 /* MenuTableViewCell.swift in Sources */,
 				1555CE1725CB556100B71D0E /* ViewController.swift in Sources */,
+				15EC5A7425CBB421008BCF50 /* CartItem.swift in Sources */,
+				15EC5A7C25CC54DB008BCF50 /* OptionSelectCell.swift in Sources */,
 				1555CE1325CB556100B71D0E /* AppDelegate.swift in Sources */,
+				15EC5A7E25CC5552008BCF50 /* OptionCheckCell.swift in Sources */,
 				1555CE1525CB556100B71D0E /* SceneDelegate.swift in Sources */,
+				15EC5A7625CBB421008BCF50 /* Enums.swift in Sources */,
+				15EC5A8025CC71B6008BCF50 /* ShoppingCartVC.swift in Sources */,
+				15EC5A8325CC7421008BCF50 /* SharedData.swift in Sources */,
 				1555CE1D25CB556100B71D0E /* chunyang_tea.xcdatamodeld in Sources */,
+				15EC5A7525CBB421008BCF50 /* DrinkData.swift in Sources */,
+				15EC5A5225CB728A008BCF50 /* MenuVC.swift in Sources */,
+				15EC5A6725CBA6C9008BCF50 /* CoreDataManager.swift in Sources */,
+				15EC5A7A25CC4D68008BCF50 /* DetailVC.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -287,6 +469,7 @@
 		};
 		1555CE2725CB556300B71D0E /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = FFD98AB0763CC6CB72F6CEAA /* Pods-chunyang-tea.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -305,6 +488,7 @@
 		};
 		1555CE2825CB556300B71D0E /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = D3327240C8F1CFF48535999B /* Pods-chunyang-tea.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
