@@ -28,6 +28,8 @@ class MenuVC : UIViewController, FUIAuthDelegate, UITableViewDelegate, UITableVi
         UserDefaults.standard.removeObject(forKey: "userEmail")
         UserDefaults.standard.set("test@gmail.com", forKey:"userEmail");
         UserDefaults.standard.synchronize();
+        
+
     }
     
     func readListData() {
@@ -63,9 +65,14 @@ class MenuVC : UIViewController, FUIAuthDelegate, UITableViewDelegate, UITableVi
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return self.teaList.count
     }
-    func tableView(_ tableView: UITableView, estimatedHeightForRowAt indexPath: IndexPath) -> CGFloat {
-        return UITableView.automaticDimension
+//    func tableView(_ tableView: UITableView, estimatedHeightForRowAt indexPath: IndexPath) -> CGFloat {
+//        return UITableView.automaticDimension
+//    }
+    
+    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        return 400
     }
+    
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "teaListCell", for: indexPath) as! MenuTableViewCell
         let tea = self.teaList[indexPath.row]
