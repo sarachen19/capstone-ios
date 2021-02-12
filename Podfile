@@ -7,8 +7,6 @@ target 'chunyang-tea' do
 
   # Pods for chunyang-tea
 
-  pod 'Firebase/Core'
-
   pod 'Firebase/Database'
   #auth components
 
