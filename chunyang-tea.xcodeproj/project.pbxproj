@@ -7,7 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		15055AEA25CB60B1003A3B01 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 15055AE925CB60B1003A3B01 /* GoogleService-Info.plist */; };
 		1555CE1325CB556100B71D0E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1555CE1225CB556100B71D0E /* AppDelegate.swift */; };
 		1555CE1525CB556100B71D0E /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1555CE1425CB556100B71D0E /* SceneDelegate.swift */; };
 		1555CE1725CB556100B71D0E /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1555CE1625CB556100B71D0E /* ViewController.swift */; };
@@ -28,11 +27,11 @@
 		15EC5A7E25CC5552008BCF50 /* OptionCheckCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15EC5A7D25CC5552008BCF50 /* OptionCheckCell.swift */; };
 		15EC5A8025CC71B6008BCF50 /* ShoppingCartVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15EC5A7F25CC71B6008BCF50 /* ShoppingCartVC.swift */; };
 		15EC5A8325CC7421008BCF50 /* SharedData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15EC5A8225CC7421008BCF50 /* SharedData.swift */; };
-		8625C0378F787052EED10FF6 /* Pods_chunyang_tea.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 58C25B2330CDF8080956B6E5 /* Pods_chunyang_tea.framework */; };
+		A259331925D6B3D9000CF700 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = A259331825D6B3D9000CF700 /* GoogleService-Info.plist */; };
+		D629B45544BF94DD1C7CF266 /* Pods_chunyang_tea.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 75C9731DA37B033BA154F3C2 /* Pods_chunyang_tea.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		15055AE925CB60B1003A3B01 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "GoogleService-Info.plist"; path = "../../../GoogleService-Info.plist"; sourceTree = "<group>"; };
 		1555CE0F25CB556100B71D0E /* chunyang-tea.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "chunyang-tea.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		1555CE1225CB556100B71D0E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		1555CE1425CB556100B71D0E /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -55,9 +54,11 @@
 		15EC5A7D25CC5552008BCF50 /* OptionCheckCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OptionCheckCell.swift; sourceTree = "<group>"; };
 		15EC5A7F25CC71B6008BCF50 /* ShoppingCartVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShoppingCartVC.swift; sourceTree = "<group>"; };
 		15EC5A8225CC7421008BCF50 /* SharedData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SharedData.swift; sourceTree = "<group>"; };
-		58C25B2330CDF8080956B6E5 /* Pods_chunyang_tea.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_chunyang_tea.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		D3327240C8F1CFF48535999B /* Pods-chunyang-tea.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-chunyang-tea.release.xcconfig"; path = "Target Support Files/Pods-chunyang-tea/Pods-chunyang-tea.release.xcconfig"; sourceTree = "<group>"; };
-		FFD98AB0763CC6CB72F6CEAA /* Pods-chunyang-tea.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-chunyang-tea.debug.xcconfig"; path = "Target Support Files/Pods-chunyang-tea/Pods-chunyang-tea.debug.xcconfig"; sourceTree = "<group>"; };
+		75C9731DA37B033BA154F3C2 /* Pods_chunyang_tea.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_chunyang_tea.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		844C745DEB858D67163C8AF2 /* Pods-chunyang-tea.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-chunyang-tea.release.xcconfig"; path = "Target Support Files/Pods-chunyang-tea/Pods-chunyang-tea.release.xcconfig"; sourceTree = "<group>"; };
+		A259331825D6B3D9000CF700 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		A259333E25D6BFF8000CF700 /* chunyang-tea copy-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; name = "chunyang-tea copy-Info.plist"; path = "/Users/brad/Documents/GitHub/capstone-chunyang-tea/chunyang-tea copy-Info.plist"; sourceTree = "<absolute>"; };
+		B1CDF3A4010FFD50600CF1A7 /* Pods-chunyang-tea.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-chunyang-tea.debug.xcconfig"; path = "Target Support Files/Pods-chunyang-tea/Pods-chunyang-tea.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -65,7 +66,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				8625C0378F787052EED10FF6 /* Pods_chunyang_tea.framework in Frameworks */,
+				D629B45544BF94DD1C7CF266 /* Pods_chunyang_tea.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -78,7 +79,8 @@
 				1555CE1125CB556100B71D0E /* chunyang-tea */,
 				1555CE1025CB556100B71D0E /* Products */,
 				572A5013806DC3853165D654 /* Pods */,
-				1B5EA1CB73AF509CFB68FDB0 /* Frameworks */,
+				A259333E25D6BFF8000CF700 /* chunyang-tea copy-Info.plist */,
+				BDE8C1052D9567879B88015A /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -104,8 +106,8 @@
 				1555CE1825CB556100B71D0E /* Main.storyboard */,
 				1555CE2025CB556300B71D0E /* LaunchScreen.storyboard */,
 				1555CE2325CB556300B71D0E /* Info.plist */,
-				15055AE925CB60B1003A3B01 /* GoogleService-Info.plist */,
 				1555CE1B25CB556100B71D0E /* chunyang_tea.xcdatamodeld */,
+				A259331825D6B3D9000CF700 /* GoogleService-Info.plist */,
 			);
 			path = "chunyang-tea";
 			sourceTree = "<group>";
@@ -159,21 +161,21 @@
 			path = TempData;
 			sourceTree = "<group>";
 		};
-		1B5EA1CB73AF509CFB68FDB0 /* Frameworks */ = {
-			isa = PBXGroup;
-			children = (
-				58C25B2330CDF8080956B6E5 /* Pods_chunyang_tea.framework */,
-			);
-			name = Frameworks;
-			sourceTree = "<group>";
-		};
 		572A5013806DC3853165D654 /* Pods */ = {
 			isa = PBXGroup;
 			children = (
-				FFD98AB0763CC6CB72F6CEAA /* Pods-chunyang-tea.debug.xcconfig */,
-				D3327240C8F1CFF48535999B /* Pods-chunyang-tea.release.xcconfig */,
+				B1CDF3A4010FFD50600CF1A7 /* Pods-chunyang-tea.debug.xcconfig */,
+				844C745DEB858D67163C8AF2 /* Pods-chunyang-tea.release.xcconfig */,
 			);
 			path = Pods;
+			sourceTree = "<group>";
+		};
+		BDE8C1052D9567879B88015A /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				75C9731DA37B033BA154F3C2 /* Pods_chunyang_tea.framework */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -183,12 +185,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 1555CE2625CB556300B71D0E /* Build configuration list for PBXNativeTarget "chunyang-tea" */;
 			buildPhases = (
-				0CCEB6035115FEA5B5AC5E1C /* [CP] Check Pods Manifest.lock */,
+				541F96A1912F9623D43D38C7 /* [CP] Check Pods Manifest.lock */,
 				1555CE0B25CB556100B71D0E /* Sources */,
 				1555CE0C25CB556100B71D0E /* Frameworks */,
 				1555CE0D25CB556100B71D0E /* Resources */,
-				95AC7F01BBC7C220AB5A0351 /* [CP] Embed Pods Frameworks */,
-				31518AF20E41CEA7A6E28155 /* [CP] Copy Pods Resources */,
+				F4E837F22857EB9A2CA4398E /* [CP] Embed Pods Frameworks */,
+				DE0A262484EBED4900E842E3 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -237,7 +239,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				1555CE2225CB556300B71D0E /* LaunchScreen.storyboard in Resources */,
-				15055AEA25CB60B1003A3B01 /* GoogleService-Info.plist in Resources */,
+				A259331925D6B3D9000CF700 /* GoogleService-Info.plist in Resources */,
 				1555CE1F25CB556300B71D0E /* Assets.xcassets in Resources */,
 				1555CE1A25CB556100B71D0E /* Main.storyboard in Resources */,
 			);
@@ -246,7 +248,7 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		0CCEB6035115FEA5B5AC5E1C /* [CP] Check Pods Manifest.lock */ = {
+		541F96A1912F9623D43D38C7 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -268,7 +270,7 @@
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
-		31518AF20E41CEA7A6E28155 /* [CP] Copy Pods Resources */ = {
+		DE0A262484EBED4900E842E3 /* [CP] Copy Pods Resources */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -285,7 +287,7 @@
 			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-chunyang-tea/Pods-chunyang-tea-resources.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
-		95AC7F01BBC7C220AB5A0351 /* [CP] Embed Pods Frameworks */ = {
+		F4E837F22857EB9A2CA4398E /* [CP] Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -469,15 +471,124 @@
 		};
 		1555CE2725CB556300B71D0E /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = FFD98AB0763CC6CB72F6CEAA /* Pods-chunyang-tea.debug.xcconfig */;
+			baseConfigurationReference = B1CDF3A4010FFD50600CF1A7 /* Pods-chunyang-tea.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
+				GCC_NO_COMMON_BLOCKS = NO;
 				INFOPLIST_FILE = "chunyang-tea/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
+				);
+				OTHER_LDFLAGS = (
+					"$(inherited)",
+					"-l\"c++\"",
+					"-l\"icucore\"",
+					"-l\"sqlite3\"",
+					"-l\"stdc++\"",
+					"-l\"z\"",
+					"-framework",
+					"\"AppAuth\"",
+					"-framework",
+					"\"CFNetwork\"",
+					"-framework",
+					"\"CoreGraphics\"",
+					"-framework",
+					"\"CoreTelephony\"",
+					"-framework",
+					"\"CoreText\"",
+					"-framework",
+					"\"FBLPromises\"",
+					"-framework",
+					"\"FBSDKCoreKit\"",
+					"-framework",
+					"\"FBSDKLoginKit\"",
+					"-framework",
+					"\"FirebaseAnalytics\"",
+					"-framework",
+					"\"FirebaseAuth\"",
+					"-framework",
+					"\"FirebaseCore\"",
+					"-framework",
+					"\"FirebaseCoreDiagnostics\"",
+					"-framework",
+					"\"FirebaseDatabase\"",
+					"-framework",
+					"\"FirebaseFirestore\"",
+					"-framework",
+					"\"FirebaseInstallations\"",
+					"-framework",
+					"\"FirebaseStorage\"",
+					"-framework",
+					"\"FirebaseUI\"",
+					"-framework",
+					"\"Foundation\"",
+					"-framework",
+					"\"GTMAppAuth\"",
+					"-framework",
+					"\"GTMSessionFetcher\"",
+					"-framework",
+					"\"GoogleAppMeasurement\"",
+					"-framework",
+					"\"GoogleDataTransport\"",
+					"-framework",
+					"\"GoogleSignIn\"",
+					"-framework",
+					"\"GoogleUtilities\"",
+					"-framework",
+					"\"ImageIO\"",
+					"-framework",
+					"\"LocalAuthentication\"",
+					"-framework",
+					"\"SDWebImage\"",
+					"-framework",
+					"\"SafariServices\"",
+					"-framework",
+					"\"Security\"",
+					"-framework",
+					"\"StoreKit\"",
+					"-framework",
+					"\"SystemConfiguration\"",
+					"-framework",
+					"\"UIKit\"",
+					"-framework",
+					"\"absl\"",
+					"-framework",
+					"\"grpc\"",
+					"-framework",
+					"\"grpcpp\"",
+					"-framework",
+					"\"leveldb\"",
+					"-framework",
+					"\"nanopb\"",
+					"-framework",
+					"\"openssl_grpc\"",
+					"-weak_framework",
+					"\"Accelerate\"",
+					"-weak_framework",
+					"\"Accounts\"",
+					"-weak_framework",
+					"\"AdSupport\"",
+					"-weak_framework",
+					"\"AudioToolbox\"",
+					"-weak_framework",
+					"\"AuthenticationServices\"",
+					"-weak_framework",
+					"\"CoreGraphics\"",
+					"-weak_framework",
+					"\"Foundation\"",
+					"-weak_framework",
+					"\"QuartzCore\"",
+					"-weak_framework",
+					"\"Security\"",
+					"-weak_framework",
+					"\"Social\"",
+					"-weak_framework",
+					"\"StoreKit\"",
+					"-weak_framework",
+					"\"UIKit\"",
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = "chunyang.chunyang-tea";
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -488,15 +599,124 @@
 		};
 		1555CE2825CB556300B71D0E /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = D3327240C8F1CFF48535999B /* Pods-chunyang-tea.release.xcconfig */;
+			baseConfigurationReference = 844C745DEB858D67163C8AF2 /* Pods-chunyang-tea.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
+				GCC_NO_COMMON_BLOCKS = NO;
 				INFOPLIST_FILE = "chunyang-tea/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
+				);
+				OTHER_LDFLAGS = (
+					"$(inherited)",
+					"-l\"c++\"",
+					"-l\"icucore\"",
+					"-l\"sqlite3\"",
+					"-l\"stdc++\"",
+					"-l\"z\"",
+					"-framework",
+					"\"AppAuth\"",
+					"-framework",
+					"\"CFNetwork\"",
+					"-framework",
+					"\"CoreGraphics\"",
+					"-framework",
+					"\"CoreTelephony\"",
+					"-framework",
+					"\"CoreText\"",
+					"-framework",
+					"\"FBLPromises\"",
+					"-framework",
+					"\"FBSDKCoreKit\"",
+					"-framework",
+					"\"FBSDKLoginKit\"",
+					"-framework",
+					"\"FirebaseAnalytics\"",
+					"-framework",
+					"\"FirebaseAuth\"",
+					"-framework",
+					"\"FirebaseCore\"",
+					"-framework",
+					"\"FirebaseCoreDiagnostics\"",
+					"-framework",
+					"\"FirebaseDatabase\"",
+					"-framework",
+					"\"FirebaseFirestore\"",
+					"-framework",
+					"\"FirebaseInstallations\"",
+					"-framework",
+					"\"FirebaseStorage\"",
+					"-framework",
+					"\"FirebaseUI\"",
+					"-framework",
+					"\"Foundation\"",
+					"-framework",
+					"\"GTMAppAuth\"",
+					"-framework",
+					"\"GTMSessionFetcher\"",
+					"-framework",
+					"\"GoogleAppMeasurement\"",
+					"-framework",
+					"\"GoogleDataTransport\"",
+					"-framework",
+					"\"GoogleSignIn\"",
+					"-framework",
+					"\"GoogleUtilities\"",
+					"-framework",
+					"\"ImageIO\"",
+					"-framework",
+					"\"LocalAuthentication\"",
+					"-framework",
+					"\"SDWebImage\"",
+					"-framework",
+					"\"SafariServices\"",
+					"-framework",
+					"\"Security\"",
+					"-framework",
+					"\"StoreKit\"",
+					"-framework",
+					"\"SystemConfiguration\"",
+					"-framework",
+					"\"UIKit\"",
+					"-framework",
+					"\"absl\"",
+					"-framework",
+					"\"grpc\"",
+					"-framework",
+					"\"grpcpp\"",
+					"-framework",
+					"\"leveldb\"",
+					"-framework",
+					"\"nanopb\"",
+					"-framework",
+					"\"openssl_grpc\"",
+					"-weak_framework",
+					"\"Accelerate\"",
+					"-weak_framework",
+					"\"Accounts\"",
+					"-weak_framework",
+					"\"AdSupport\"",
+					"-weak_framework",
+					"\"AudioToolbox\"",
+					"-weak_framework",
+					"\"AuthenticationServices\"",
+					"-weak_framework",
+					"\"CoreGraphics\"",
+					"-weak_framework",
+					"\"Foundation\"",
+					"-weak_framework",
+					"\"QuartzCore\"",
+					"-weak_framework",
+					"\"Security\"",
+					"-weak_framework",
+					"\"Social\"",
+					"-weak_framework",
+					"\"StoreKit\"",
+					"-weak_framework",
+					"\"UIKit\"",
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = "chunyang.chunyang-tea";
 				PRODUCT_NAME = "$(TARGET_NAME)";
