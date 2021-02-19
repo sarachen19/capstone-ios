@@ -347,6 +347,13 @@ class DetailVC: UIViewController, UITableViewDelegate, UITableViewDataSource {
         if tempItem.tea != nil {SharedData.shoppingList.append(tempItem);}
     }
     
+    // When user click cart icon jump to cartVC
+    // Code below IS NOT WORKING
+    @IBAction func toCartVC(_ sender: Any) {
+        self.navigationController?.present(self.storyboard!.instantiateViewController(withIdentifier: "ShoppingCartVC") as UIViewController, animated: true)
+        
+    }
+    
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         
         if segue.identifier == "shoppingCart" {

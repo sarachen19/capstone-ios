@@ -180,6 +180,8 @@
                                             <color key="titleColor" name="AccentColor"/>
                                         </state>
                                         <connections>
+                                            <action selector="test:" destination="fdW-Xx-eye" eventType="touchUpInside" id="REm-fZ-kNi"/>
+                                            <action selector="toCartVC:" destination="fdW-Xx-eye" eventType="touchUpInside" id="Rhb-l0-uNM"/>
                                             <segue destination="BfV-JF-AKu" kind="show" id="h8i-I5-2Hq"/>
                                         </connections>
                                     </button>
@@ -213,6 +215,7 @@
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="d0T-wb-gBd" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <exit id="fdW-Xx-eye" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
             <point key="canvasLocation" x="278" y="121"/>
         </scene>
@@ -524,6 +527,9 @@
                                         <state key="normal" image="cart" catalog="system">
                                             <color key="titleColor" name="AccentColor"/>
                                         </state>
+                                        <connections>
+                                            <action selector="toCartVC:" destination="TAi-gX-PdH" eventType="touchUpInside" id="Yj8-PI-KpA"/>
+                                        </connections>
                                     </button>
                                 </subviews>
                                 <color key="backgroundColor" name="DeepBlueColor"/>
@@ -584,7 +590,7 @@
         <!--My Cart-->
         <scene sceneID="A6P-2s-uVK">
             <objects>
-                <viewController id="BfV-JF-AKu" customClass="ShoppingCartVC" customModule="chunyang_tea" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="ShoppingCartVC" id="BfV-JF-AKu" customClass="ShoppingCartVC" customModule="chunyang_tea" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Dgq-us-2cB">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -649,7 +655,7 @@
                                             <color key="titleColor" name="DeepBlueColor"/>
                                         </state>
                                         <connections>
-                                            <segue destination="0mH-PX-Fzv" kind="show" id="yoA-68-bbl"/>
+                                            <action selector="confirmAction:" destination="BfV-JF-AKu" eventType="touchUpInside" id="Fzd-S6-3sk"/>
                                         </connections>
                                     </button>
                                 </subviews>
