@@ -9,6 +9,7 @@ import UIKit
 
 class OrderPlacedVC: UIViewController {
 
+    @IBOutlet weak var CircleLabel: UILabel!
     
     override func viewDidLoad() {
         super.viewDidLoad()
