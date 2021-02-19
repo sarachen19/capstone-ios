@@ -6,8 +6,6 @@ target 'chunyang-tea' do
   use_frameworks!
 
   # Pods for chunyang-tea
- 
-  pod 'Firebase/Core'
 
   pod 'Firebase/Database'
   #auth components
