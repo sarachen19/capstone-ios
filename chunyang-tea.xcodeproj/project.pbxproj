@@ -7,7 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		15055AEA25CB60B1003A3B01 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 15055AE925CB60B1003A3B01 /* GoogleService-Info.plist */; };
 		1555CE1325CB556100B71D0E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1555CE1225CB556100B71D0E /* AppDelegate.swift */; };
 		1555CE1525CB556100B71D0E /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1555CE1425CB556100B71D0E /* SceneDelegate.swift */; };
 		1555CE1725CB556100B71D0E /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1555CE1625CB556100B71D0E /* ViewController.swift */; };
@@ -29,10 +28,10 @@
 		15EC5A8025CC71B6008BCF50 /* ShoppingCartVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15EC5A7F25CC71B6008BCF50 /* ShoppingCartVC.swift */; };
 		15EC5A8325CC7421008BCF50 /* SharedData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15EC5A8225CC7421008BCF50 /* SharedData.swift */; };
 		8625C0378F787052EED10FF6 /* Pods_chunyang_tea.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 58C25B2330CDF8080956B6E5 /* Pods_chunyang_tea.framework */; };
+		A22CED0B25DF7DCA0010D8F0 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = A22CED0A25DF7DCA0010D8F0 /* GoogleService-Info.plist */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		15055AE925CB60B1003A3B01 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "GoogleService-Info.plist"; path = "../../../GoogleService-Info.plist"; sourceTree = "<group>"; };
 		1555CE0F25CB556100B71D0E /* chunyang-tea.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "chunyang-tea.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		1555CE1225CB556100B71D0E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		1555CE1425CB556100B71D0E /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -56,6 +55,7 @@
 		15EC5A7F25CC71B6008BCF50 /* ShoppingCartVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShoppingCartVC.swift; sourceTree = "<group>"; };
 		15EC5A8225CC7421008BCF50 /* SharedData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SharedData.swift; sourceTree = "<group>"; };
 		58C25B2330CDF8080956B6E5 /* Pods_chunyang_tea.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_chunyang_tea.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		A22CED0A25DF7DCA0010D8F0 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		D3327240C8F1CFF48535999B /* Pods-chunyang-tea.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-chunyang-tea.release.xcconfig"; path = "Target Support Files/Pods-chunyang-tea/Pods-chunyang-tea.release.xcconfig"; sourceTree = "<group>"; };
 		FFD98AB0763CC6CB72F6CEAA /* Pods-chunyang-tea.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-chunyang-tea.debug.xcconfig"; path = "Target Support Files/Pods-chunyang-tea/Pods-chunyang-tea.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -103,8 +103,8 @@
 				1555CE1E25CB556300B71D0E /* Assets.xcassets */,
 				1555CE1825CB556100B71D0E /* Main.storyboard */,
 				1555CE2025CB556300B71D0E /* LaunchScreen.storyboard */,
+				A22CED0A25DF7DCA0010D8F0 /* GoogleService-Info.plist */,
 				1555CE2325CB556300B71D0E /* Info.plist */,
-				15055AE925CB60B1003A3B01 /* GoogleService-Info.plist */,
 				1555CE1B25CB556100B71D0E /* chunyang_tea.xcdatamodeld */,
 			);
 			path = "chunyang-tea";
@@ -237,7 +237,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				1555CE2225CB556300B71D0E /* LaunchScreen.storyboard in Resources */,
-				15055AEA25CB60B1003A3B01 /* GoogleService-Info.plist in Resources */,
+				A22CED0B25DF7DCA0010D8F0 /* GoogleService-Info.plist in Resources */,
 				1555CE1F25CB556300B71D0E /* Assets.xcassets in Resources */,
 				1555CE1A25CB556100B71D0E /* Main.storyboard in Resources */,
 			);
