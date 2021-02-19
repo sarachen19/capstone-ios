@@ -648,6 +648,9 @@
                                         <state key="normal" title="CONFIRM">
                                             <color key="titleColor" name="DeepBlueColor"/>
                                         </state>
+                                        <connections>
+                                            <segue destination="0mH-PX-Fzv" kind="show" id="yoA-68-bbl"/>
+                                        </connections>
                                     </button>
                                 </subviews>
                                 <color key="backgroundColor" name="DeepBlueColor"/>
@@ -665,20 +668,69 @@
             </objects>
             <point key="canvasLocation" x="1144.9275362318842" y="908.70535714285711"/>
         </scene>
-        <!--View Controller-->
+        <!--Order PlacedVC-->
         <scene sceneID="AwG-Kt-P87">
             <objects>
-                <viewController id="0mH-PX-Fzv" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="OrderPlacedVC" id="0mH-PX-Fzv" customClass="OrderPlacedVC" customModule="chunyang_tea" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="NHC-A9-lgQ">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Thank You !" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Qt2-F8-7IT">
+                                <rect key="frame" x="156" y="183" width="103" height="24"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                <color key="textColor" name="LightYellowColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="A2077" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="N2h-L2-wdE">
+                                <rect key="frame" x="86" y="291" width="242" height="77"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="48"/>
+                                <color key="textColor" name="LightYellowColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" editable="NO" text="$30.5 is to be paid when you arrive." textAlignment="natural" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0RY-Tv-g0j">
+                                <rect key="frame" x="64" y="558" width="287" height="50"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" name="DeepBlueColor"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                <dataDetectorType key="dataDetectorTypes" lookupSuggestion="YES"/>
+                            </textView>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="RPr-Op-9L3">
+                                <rect key="frame" x="113" y="722" width="188" height="56"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="1" green="0.78827079619999996" blue="0.47007257759999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <fontDescription key="fontDescription" type="system" weight="black" pointSize="23"/>
+                                <state key="normal" title="DONE">
+                                    <color key="titleColor" name="DeepBlueColor"/>
+                                </state>
+                                <connections>
+                                    <action selector="toMenuVC:" destination="0mH-PX-Fzv" eventType="touchUpInside" id="dkh-iP-YWr"/>
+                                </connections>
+                            </button>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" editable="NO" text="Please allow around 15 minutes. " textAlignment="natural" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dpT-tC-ppR">
+                                <rect key="frame" x="81" y="492" width="253" height="41"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" name="DeepBlueColor"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                <dataDetectorType key="dataDetectorTypes" lookupSuggestion="YES"/>
+                            </textView>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="fwg-IW-w85"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <color key="backgroundColor" name="DeepBlueColor"/>
                     </view>
+                    <navigationItem key="navigationItem" id="jpF-19-46D">
+                        <barButtonItem key="rightBarButtonItem" title="DONE" id="lTJ-Pr-GMN"/>
+                    </navigationItem>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="62u-1h-6Q4" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2381" y="909"/>
+            <point key="canvasLocation" x="2379.7101449275365" y="908.70535714285711"/>
         </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="OEU-KI-ssC">

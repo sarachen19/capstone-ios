@@ -29,6 +29,9 @@ class MenuVC : UIViewController, FUIAuthDelegate, UITableViewDelegate, UITableVi
         UserDefaults.standard.set("test@gmail.com", forKey:"userEmail");
         UserDefaults.standard.synchronize();
         
+        // Hide the navigation bar
+        self.navigationController?.setNavigationBarHidden(true, animated: true)
+
 
     }
     
@@ -93,6 +96,12 @@ class MenuVC : UIViewController, FUIAuthDelegate, UITableViewDelegate, UITableVi
         let tea = self.teaList[indexPath.row]
         
    }
+    
+//    override func viewWillAppear(_ animated: Bool) {
+//        
+//        self.navigationController?.setNavigationBarHidden(true, animated: true)
+//
+//    }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         

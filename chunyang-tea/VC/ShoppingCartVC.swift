@@ -14,6 +14,7 @@ class ShoppingCartVC : UIViewController, UITableViewDelegate, UITableViewDataSou
     var shoppingList : [CartItem]?
     @IBOutlet weak var tableView: UITableView!
     
+    
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return shoppingList!.count
     }
