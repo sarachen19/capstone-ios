@@ -29,6 +29,7 @@
 		15EC5A8325CC7421008BCF50 /* SharedData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15EC5A8225CC7421008BCF50 /* SharedData.swift */; };
 		8625C0378F787052EED10FF6 /* Pods_chunyang_tea.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 58C25B2330CDF8080956B6E5 /* Pods_chunyang_tea.framework */; };
 		A22CED0B25DF7DCA0010D8F0 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = A22CED0A25DF7DCA0010D8F0 /* GoogleService-Info.plist */; };
+		A2E2E37825DFB4E3006978FB /* OrderPlacedVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2E2E37725DFB4E3006978FB /* OrderPlacedVC.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -56,6 +57,7 @@
 		15EC5A8225CC7421008BCF50 /* SharedData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SharedData.swift; sourceTree = "<group>"; };
 		58C25B2330CDF8080956B6E5 /* Pods_chunyang_tea.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_chunyang_tea.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		A22CED0A25DF7DCA0010D8F0 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		A2E2E37725DFB4E3006978FB /* OrderPlacedVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrderPlacedVC.swift; sourceTree = "<group>"; };
 		D3327240C8F1CFF48535999B /* Pods-chunyang-tea.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-chunyang-tea.release.xcconfig"; path = "Target Support Files/Pods-chunyang-tea/Pods-chunyang-tea.release.xcconfig"; sourceTree = "<group>"; };
 		FFD98AB0763CC6CB72F6CEAA /* Pods-chunyang-tea.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-chunyang-tea.debug.xcconfig"; path = "Target Support Files/Pods-chunyang-tea/Pods-chunyang-tea.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -117,6 +119,7 @@
 				15EC5A5125CB728A008BCF50 /* MenuVC.swift */,
 				15EC5A7925CC4D68008BCF50 /* DetailVC.swift */,
 				15EC5A7F25CC71B6008BCF50 /* ShoppingCartVC.swift */,
+				A2E2E37725DFB4E3006978FB /* OrderPlacedVC.swift */,
 			);
 			path = VC;
 			sourceTree = "<group>";
@@ -321,6 +324,7 @@
 				15EC5A7625CBB421008BCF50 /* Enums.swift in Sources */,
 				15EC5A8025CC71B6008BCF50 /* ShoppingCartVC.swift in Sources */,
 				15EC5A8325CC7421008BCF50 /* SharedData.swift in Sources */,
+				A2E2E37825DFB4E3006978FB /* OrderPlacedVC.swift in Sources */,
 				1555CE1D25CB556100B71D0E /* chunyang_tea.xcdatamodeld in Sources */,
 				15EC5A7525CBB421008BCF50 /* DrinkData.swift in Sources */,
 				15EC5A5225CB728A008BCF50 /* MenuVC.swift in Sources */,
