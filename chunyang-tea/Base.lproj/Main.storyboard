@@ -656,7 +656,6 @@
                                         </state>
                                         <connections>
                                             <action selector="confirmAction:" destination="BfV-JF-AKu" eventType="touchUpInside" id="Fzd-S6-3sk"/>
-                                            <segue destination="0mH-PX-Fzv" kind="show" identifier="toOrderPlacedVC" id="kb4-iZ-3gv"/>
                                         </connections>
                                     </button>
                                 </subviews>
@@ -684,28 +683,21 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Thank You !" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Qt2-F8-7IT">
-                                <rect key="frame" x="156" y="150" width="103" height="24"/>
+                                <rect key="frame" x="156" y="183" width="103" height="24"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                 <color key="textColor" name="LightYellowColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Here's your reference number" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1zw-Hu-Ofx">
-                                <rect key="frame" x="93" y="221" width="228" height="21"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="#Ref Number" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="N2h-L2-wdE">
-                                <rect key="frame" x="60" y="242" width="295" height="77"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="A2077" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="N2h-L2-wdE">
+                                <rect key="frame" x="86" y="291" width="242" height="77"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="48"/>
                                 <color key="textColor" name="LightYellowColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" editable="NO" text="$30.5 is to be paid when you arrive." textAlignment="natural" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0RY-Tv-g0j">
-                                <rect key="frame" x="64" y="675" width="287" height="50"/>
+                                <rect key="frame" x="64" y="558" width="287" height="50"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" name="DeepBlueColor"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -714,7 +706,7 @@
                                 <dataDetectorType key="dataDetectorTypes" lookupSuggestion="YES"/>
                             </textView>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="RPr-Op-9L3">
-                                <rect key="frame" x="113" y="753" width="188" height="56"/>
+                                <rect key="frame" x="113" y="722" width="188" height="56"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" red="1" green="0.78827079619999996" blue="0.47007257759999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <fontDescription key="fontDescription" type="system" weight="black" pointSize="23"/>
@@ -726,7 +718,7 @@
                                 </connections>
                             </button>
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" editable="NO" text="Please allow around 15 minutes. " textAlignment="natural" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dpT-tC-ppR">
-                                <rect key="frame" x="81" y="626" width="253" height="41"/>
+                                <rect key="frame" x="81" y="492" width="253" height="41"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" name="DeepBlueColor"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -734,26 +726,6 @@
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                                 <dataDetectorType key="dataDetectorTypes" lookupSuggestion="YES"/>
                             </textView>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="C5c-Mk-Ruq">
-                                <rect key="frame" x="60" y="366" width="295" height="202"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                                <color key="sectionIndexBackgroundColor" name="DeepBlueColor"/>
-                                <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" restorationIdentifier="cell" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" id="One-dZ-DZ2">
-                                        <rect key="frame" x="0.0" y="28" width="295" height="43.5"/>
-                                        <autoresizingMask key="autoresizingMask"/>
-                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="One-dZ-DZ2" id="QLz-XL-Y4u">
-                                            <rect key="frame" x="0.0" y="0.0" width="295" height="43.5"/>
-                                            <autoresizingMask key="autoresizingMask"/>
-                                        </tableViewCellContentView>
-                                    </tableViewCell>
-                                </prototypes>
-                                <connections>
-                                    <outlet property="dataSource" destination="0mH-PX-Fzv" id="ywP-Qt-g8v"/>
-                                    <outlet property="delegate" destination="0mH-PX-Fzv" id="6YC-tW-7Gl"/>
-                                </connections>
-                            </tableView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="fwg-IW-w85"/>
                         <color key="backgroundColor" name="DeepBlueColor"/>
@@ -761,11 +733,6 @@
                     <navigationItem key="navigationItem" id="jpF-19-46D">
                         <barButtonItem key="rightBarButtonItem" title="DONE" id="lTJ-Pr-GMN"/>
                     </navigationItem>
-                    <connections>
-                        <outlet property="amountNotice" destination="0RY-Tv-g0j" id="cua-Fc-YvN"/>
-                        <outlet property="drinksTableView" destination="C5c-Mk-Ruq" id="tVX-Av-gEa"/>
-                        <outlet property="qNumber" destination="N2h-L2-wdE" id="brM-V9-zTD"/>
-                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="62u-1h-6Q4" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
