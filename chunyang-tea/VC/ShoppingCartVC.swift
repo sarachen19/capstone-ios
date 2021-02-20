@@ -12,7 +12,10 @@ import FirebaseCore
 import FirebaseDatabase
 
 class ShoppingCartVC : UIViewController, UITableViewDelegate, UITableViewDataSource  {
+    
     var shoppingList : [CartItem]?
+    var orderUID:String!
+    
     @IBOutlet weak var tableView: UITableView!
     
     // Firebase reference
@@ -22,8 +25,8 @@ class ShoppingCartVC : UIViewController, UITableViewDelegate, UITableViewDataSou
     // ⚠️Action when user click confirm
     // 1. Add all drinks inside cart into Database
     // 2. Clear the cart
-    // 3. Add record
-    // 3. Close this VC & Navigate to OrderPlaceVC
+    // 3. Modify reward points
+    // 4. Close this VC & Navigate to OrderPlaceVC
     @IBAction func confirmAction(_ sender: Any) {
         
 
@@ -32,7 +35,7 @@ class ShoppingCartVC : UIViewController, UITableViewDelegate, UITableViewDataSou
         // 1. Add all drinks inside cart into Database
         
             //get UID of this order for locating it
-        let orderUID = ref.child("orderList").childByAutoId().key!
+        orderUID = ref.child("orderList").childByAutoId().key! as! String
         
             // Get current toronto time (UTC-5)
         let now = Date()
@@ -45,7 +48,7 @@ class ShoppingCartVC : UIViewController, UITableViewDelegate, UITableViewDataSou
         let numbers = "0123456789"
         let qNum = String((0..<1).map{ _ in letters.randomElement()! }) + String((0..<4).map{ _ in numbers.randomElement()! })
             // 1.1 Add some basic info of this order first
-        ref.child("orderList/\(String(describing: orderUID))")
+        ref.child("orderList/\(String(describing: orderUID as! String))")
            .setValue([
                             "orderTime":"\(dateString)",
                             "payVia":"App_Cash",
@@ -61,7 +64,7 @@ class ShoppingCartVC : UIViewController, UITableViewDelegate, UITableViewDataSou
         for index in 0...(length!-1){
             let teaInCart = shoppingList?[index]
             orderTotalPrice += teaInCart?.totalPrice ?? 0
-            ref.child("orderList/\(String(describing: orderUID))")
+            ref.child("orderList/\(String(describing: orderUID as! String))")
                .child("drinks")
                .child("\(String(describing: teaInCart?.tea?.name_en as! String))")
                .setValue([
@@ -78,11 +81,13 @@ class ShoppingCartVC : UIViewController, UITableViewDelegate, UITableViewDataSou
         }
         
             // 1.3 Finally add the order total price in to DB
-        ref.child("orderList/\(String(describing: orderUID))").child("orderTotalPrice").setValue("\(orderTotalPrice)")
+        ref.child("orderList/\(String(describing: orderUID as! String))")
+           .child("orderTotalPrice")
+           .setValue("\(orderTotalPrice)")
 
         
-        // 3. Close this VC & Navigate to OrderPlaceVC
-        self.navigationController!.pushViewController(self.storyboard!.instantiateViewController(withIdentifier: "OrderPlacedVC") as UIViewController, animated: true)
+//        // 3. Close this VC & Navigate to OrderPlaceVC
+//        self.navigationController!.pushViewController(self.storyboard!.instantiateViewController(withIdentifier: "OrderPlacedVC") as UIViewController, animated: false)
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -101,9 +106,17 @@ class ShoppingCartVC : UIViewController, UITableViewDelegate, UITableViewDataSou
     override func viewDidLoad() {
         self.shoppingList = SharedData.shoppingList
         print(UserDefaults.standard.string(forKey: "userEmail"))
+        self.navigationController?.setNavigationBarHidden(false, animated: true)
 
     }
 
-    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        
+        if segue.identifier == "toOrderPlacedVC" {
+            if let placedVC = segue.destination as? OrderPlacedVC{
+                placedVC.orderID = self.orderUID
+            }
+        }
+    }
     
 }
