@@ -33,8 +33,19 @@ class OrderPlacedVC: UIViewController{
         // Hide navigation bar
         self.navigationController?.setNavigationBarHidden(true, animated: false)
         
-        // Get order info from firebase 
+        // Get order info from firebase
+        self.ref.child("orderList/\(orderID)/qNum").getData { (error, snapshot) in
+            DispatchQueue.main.async {
+                self.qNumber.text = (snapshot.value as! String)
+            }
+        }
         
+        self.ref.child("orderList/\(orderID)/orderTotalPrice")
+            .getData { (error, snapshot) in
+                DispatchQueue.main.async {
+                    self.amountNotice.text = "$\(snapshot.value as! String) is to be paid when you arrive."
+                }
+        }
         // Do any additional setup after loading the view.
     }
     
