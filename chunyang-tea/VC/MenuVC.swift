@@ -97,12 +97,6 @@ class MenuVC : UIViewController, FUIAuthDelegate, UITableViewDelegate, UITableVi
         
    }
     
-//    override func viewWillAppear(_ animated: Bool) {
-//        
-//        self.navigationController?.setNavigationBarHidden(true, animated: true)
-//
-//    }
-    
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         
         if segue.identifier == "menuToDetail" {
