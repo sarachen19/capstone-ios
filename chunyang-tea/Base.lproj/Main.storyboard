@@ -734,26 +734,6 @@
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                                 <dataDetectorType key="dataDetectorTypes" lookupSuggestion="YES"/>
                             </textView>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="C5c-Mk-Ruq">
-                                <rect key="frame" x="60" y="366" width="295" height="202"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                                <color key="sectionIndexBackgroundColor" name="DeepBlueColor"/>
-                                <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" restorationIdentifier="cell" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" id="One-dZ-DZ2">
-                                        <rect key="frame" x="0.0" y="28" width="295" height="43.5"/>
-                                        <autoresizingMask key="autoresizingMask"/>
-                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="One-dZ-DZ2" id="QLz-XL-Y4u">
-                                            <rect key="frame" x="0.0" y="0.0" width="295" height="43.5"/>
-                                            <autoresizingMask key="autoresizingMask"/>
-                                        </tableViewCellContentView>
-                                    </tableViewCell>
-                                </prototypes>
-                                <connections>
-                                    <outlet property="dataSource" destination="0mH-PX-Fzv" id="ywP-Qt-g8v"/>
-                                    <outlet property="delegate" destination="0mH-PX-Fzv" id="6YC-tW-7Gl"/>
-                                </connections>
-                            </tableView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="fwg-IW-w85"/>
                         <color key="backgroundColor" name="DeepBlueColor"/>
@@ -763,7 +743,6 @@
                     </navigationItem>
                     <connections>
                         <outlet property="amountNotice" destination="0RY-Tv-g0j" id="cua-Fc-YvN"/>
-                        <outlet property="drinksTableView" destination="C5c-Mk-Ruq" id="tVX-Av-gEa"/>
                         <outlet property="qNumber" destination="N2h-L2-wdE" id="brM-V9-zTD"/>
                     </connections>
                 </viewController>
