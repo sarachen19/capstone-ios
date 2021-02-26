@@ -52,7 +52,7 @@ class ShoppingCartVC : UIViewController, UITableViewDelegate, UITableViewDataSou
            .setValue([
                             "orderTime":"\(dateString)",
                             "payVia":"App_Cash",
-                            "userID":"\(Auth.auth().currentUser?.uid)",
+            "userEmail":"\( String( UserDefaults.standard.string(forKey: "userEmail")!))",
                             "qNum":"\(qNum)"
                     ])
         
@@ -85,9 +85,28 @@ class ShoppingCartVC : UIViewController, UITableViewDelegate, UITableViewDataSou
            .child("orderTotalPrice")
            .setValue("\(orderTotalPrice)")
 
+        // 2. Clear the Cart
+        SharedData.shoppingList.removeAll()
         
-//        // 3. Close this VC & Navigate to OrderPlaceVC
+        // 3. Modify reward points
+//        userMustHasCreditRecord(userEmail: UserDefaults.standard.string(forKey: "userEmail")!)
+        
 //        self.navigationController!.pushViewController(self.storyboard!.instantiateViewController(withIdentifier: "OrderPlacedVC") as UIViewController, animated: false)
+    }
+    
+    // A function to test if the user already has credit record
+    func userMustHasCreditRecord(userEmail : String) {
+        ref.child("orderList/userCredits").observeSingleEvent(of: .value, with: { (snapshot) in
+
+             if snapshot.hasChild("test"){
+
+             }else{
+
+                self.ref.child("orderList/userCredits/\(userEmail)")
+                    .setValue(0)
+             }
+
+         })
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
