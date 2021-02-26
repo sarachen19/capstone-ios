@@ -6,12 +6,22 @@
 //
 
 import UIKit
+import FirebaseUI
+import FirebaseCore
+import FirebaseDatabase
 
-class MemberInfoVC: UIViewController {
+class CreditsInfoVC: UIViewController {
 
+    @IBOutlet weak var welcomeLabel: UILabel!
+    
+    let ref = Database.database().reference()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         self.navigationController?.setNavigationBarHidden(true, animated: true)
+        
+        
+        welcomeLabel.text = UserDefaults.standard.string(forKey: "userEmail")
         // Do any additional setup after loading the view.
     }
     
