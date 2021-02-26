@@ -29,7 +29,7 @@
 		15EC5A8325CC7421008BCF50 /* SharedData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15EC5A8225CC7421008BCF50 /* SharedData.swift */; };
 		8625C0378F787052EED10FF6 /* Pods_chunyang_tea.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 58C25B2330CDF8080956B6E5 /* Pods_chunyang_tea.framework */; };
 		A22CED0B25DF7DCA0010D8F0 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = A22CED0A25DF7DCA0010D8F0 /* GoogleService-Info.plist */; };
-		A2403BC425E925EA00B7E1C1 /* MemberInfoVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2403BC325E925EA00B7E1C1 /* MemberInfoVC.swift */; };
+		A2403BC425E925EA00B7E1C1 /* CreditsInfoVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2403BC325E925EA00B7E1C1 /* CreditsInfoVC.swift */; };
 		A2E2E37825DFB4E3006978FB /* OrderPlacedVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2E2E37725DFB4E3006978FB /* OrderPlacedVC.swift */; };
 /* End PBXBuildFile section */
 
@@ -58,7 +58,7 @@
 		15EC5A8225CC7421008BCF50 /* SharedData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SharedData.swift; sourceTree = "<group>"; };
 		58C25B2330CDF8080956B6E5 /* Pods_chunyang_tea.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_chunyang_tea.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		A22CED0A25DF7DCA0010D8F0 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
-		A2403BC325E925EA00B7E1C1 /* MemberInfoVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MemberInfoVC.swift; sourceTree = "<group>"; };
+		A2403BC325E925EA00B7E1C1 /* CreditsInfoVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreditsInfoVC.swift; sourceTree = "<group>"; };
 		A2E2E37725DFB4E3006978FB /* OrderPlacedVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrderPlacedVC.swift; sourceTree = "<group>"; };
 		D3327240C8F1CFF48535999B /* Pods-chunyang-tea.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-chunyang-tea.release.xcconfig"; path = "Target Support Files/Pods-chunyang-tea/Pods-chunyang-tea.release.xcconfig"; sourceTree = "<group>"; };
 		FFD98AB0763CC6CB72F6CEAA /* Pods-chunyang-tea.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-chunyang-tea.debug.xcconfig"; path = "Target Support Files/Pods-chunyang-tea/Pods-chunyang-tea.debug.xcconfig"; sourceTree = "<group>"; };
@@ -122,7 +122,7 @@
 				15EC5A7925CC4D68008BCF50 /* DetailVC.swift */,
 				15EC5A7F25CC71B6008BCF50 /* ShoppingCartVC.swift */,
 				A2E2E37725DFB4E3006978FB /* OrderPlacedVC.swift */,
-				A2403BC325E925EA00B7E1C1 /* MemberInfoVC.swift */,
+				A2403BC325E925EA00B7E1C1 /* CreditsInfoVC.swift */,
 			);
 			path = VC;
 			sourceTree = "<group>";
@@ -316,7 +316,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				15EC5A7225CBB421008BCF50 /* PostOrder.swift in Sources */,
-				A2403BC425E925EA00B7E1C1 /* MemberInfoVC.swift in Sources */,
+				A2403BC425E925EA00B7E1C1 /* CreditsInfoVC.swift in Sources */,
 				15EC5A6925CBADD2008BCF50 /* FirebaseHelper.swift in Sources */,
 				15EC5A7825CC3CF9008BCF50 /* MenuTableViewCell.swift in Sources */,
 				1555CE1725CB556100B71D0E /* ViewController.swift in Sources */,
