@@ -574,24 +574,53 @@
         <!--My Membership-->
         <scene sceneID="RRG-7i-N99">
             <objects>
-                <viewController id="AtW-b7-bM2" customClass="MemberInfoVC" customModule="chunyang_tea" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="AtW-b7-bM2" customClass="CreditsInfoVC" customModule="chunyang_tea" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8gS-sg-NkR">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7cX-nN-rrM">
-                                <rect key="frame" x="299" y="39" width="95" height="51"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Credit Points" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="G6O-Vh-ioG">
+                                <rect key="frame" x="60" y="356" width="295" height="77"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="History"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="48"/>
+                                <color key="textColor" name="DeepBlueColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Current Points:" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yqx-yT-qJe">
+                                <rect key="frame" x="103" y="276" width="208" height="72"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" weight="medium" pointSize="19"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ekc-tS-ORZ">
+                                <rect key="frame" x="113" y="648" width="188" height="56"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" name="DeepBlueColor"/>
+                                <fontDescription key="fontDescription" type="system" weight="black" pointSize="23"/>
+                                <state key="normal" title="My Profile">
+                                    <color key="titleColor" name="LightYellowColor"/>
+                                </state>
                                 <connections>
-                                    <segue destination="R0z-wA-8Dh" kind="show" id="ylm-Tv-YPX"/>
+                                    <action selector="toMenuVC:" destination="0mH-PX-Fzv" eventType="touchUpInside" id="NBj-SD-WAh"/>
+                                    <segue destination="R0z-wA-8Dh" kind="show" id="zvZ-8H-KtP"/>
                                 </connections>
                             </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Welcome, userName" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9kT-9K-n2j">
+                                <rect key="frame" x="60" y="149" width="206" height="38"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="17"/>
+                                <color key="textColor" name="DeepBlueColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="f5x-Jf-7lH"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <color key="backgroundColor" name="DeepYellowColor"/>
                     </view>
                     <tabBarItem key="tabBarItem" title="My Membership" image="person" catalog="system" id="Eeh-wu-klQ"/>
+                    <connections>
+                        <outlet property="welcomeLabel" destination="9kT-9K-n2j" id="0sj-Nn-UFn"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="77D-zV-LdN" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -605,13 +634,13 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <viewLayoutGuide key="safeArea" id="crM-NP-G6r"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <color key="backgroundColor" name="DeepYellowColor"/>
                     </view>
                     <navigationItem key="navigationItem" id="Fb6-WP-t4q"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="7JR-fW-d6q" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-484" y="1591"/>
+            <point key="canvasLocation" x="-484.05797101449281" y="1590.4017857142856"/>
         </scene>
         <!--My Cart-->
         <scene sceneID="A6P-2s-uVK">
@@ -785,7 +814,10 @@
                     <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="gfz-fg-DHR">
                         <rect key="frame" x="0.0" y="0.0" width="1000" height="1000"/>
                         <autoresizingMask key="autoresizingMask"/>
-                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <color key="backgroundColor" name="DeepBlueColor"/>
+                        <color key="tintColor" name="DeepBlueColor"/>
+                        <color key="barTintColor" name="DeepBlueColor"/>
+                        <color key="selectedImageTintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     </tabBar>
                     <connections>
                         <segue destination="AtW-b7-bM2" kind="relationship" relationship="viewControllers" id="fuf-bN-6kG"/>
