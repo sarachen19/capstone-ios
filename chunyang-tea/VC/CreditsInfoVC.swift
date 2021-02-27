@@ -21,7 +21,7 @@ class CreditsInfoVC: UIViewController {
         self.navigationController?.setNavigationBarHidden(true, animated: true)
         
         
-        welcomeLabel.text = UserDefaults.standard.string(forKey: "userEmail")
+        welcomeLabel.text = UserDefaults.standard.string(forKey: "uid")
         // Do any additional setup after loading the view.
     }
     

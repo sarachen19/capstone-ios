@@ -31,9 +31,9 @@ class ViewController: UIViewController, FUIAuthDelegate {
       // handle user and error as necessary
         if user != nil {
             //store username
-           let email = user?.email ?? "no email"
-           UserDefaults.standard.removeObject(forKey: "userEmail")
-            UserDefaults.standard.set(email, forKey:"userEmail");
+            let uid = user?.uid ?? "no uid"
+           UserDefaults.standard.removeObject(forKey: "uid")
+            UserDefaults.standard.set(uid, forKey:"uid");
             UserDefaults.standard.synchronize();
             let mainVC = self.storyboard?.instantiateViewController(withIdentifier: "mainVC") as! UITabBarController
             self.navigationController!.pushViewController(mainVC, animated: true)
