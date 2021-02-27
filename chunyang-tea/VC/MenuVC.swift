@@ -24,10 +24,10 @@ class MenuVC : UIViewController, FUIAuthDelegate, UITableViewDelegate, UITableVi
             FirebaseApp.configure();
             }
         readListData()
-        //test username
-        UserDefaults.standard.removeObject(forKey: "userEmail")
-        UserDefaults.standard.set("test@gmail.com", forKey:"userEmail");
-        UserDefaults.standard.synchronize();
+//        //test username
+//        UserDefaults.standard.removeObject(forKey: "userEmail")
+//        UserDefaults.standard.set("test@gmail.com", forKey:"userEmail");
+//        UserDefaults.standard.synchronize();
         
         // Hide the navigation bar
         self.navigationController?.setNavigationBarHidden(true, animated: true)

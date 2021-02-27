@@ -30,8 +30,13 @@ class ViewController: UIViewController, FUIAuthDelegate {
     func authUI(_ authUI: FUIAuth, didSignInWith user: User?, error: Error?) {
       // handle user and error as necessary
         if user != nil {
-            let menuVC = self.storyboard?.instantiateViewController(withIdentifier: "menuVC") as! MenuVC
-            self.navigationController!.pushViewController(menuVC, animated: true)
+            //store username
+           let email = user?.email ?? "no email"
+           UserDefaults.standard.removeObject(forKey: "userEmail")
+            UserDefaults.standard.set(email, forKey:"userEmail");
+            UserDefaults.standard.synchronize();
+            let mainVC = self.storyboard?.instantiateViewController(withIdentifier: "mainVC") as! UITabBarController
+            self.navigationController!.pushViewController(mainVC, animated: true)
         }
     }
 
