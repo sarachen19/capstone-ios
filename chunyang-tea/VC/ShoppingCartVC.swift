@@ -69,6 +69,7 @@ class ShoppingCartVC : UIViewController, UITableViewDelegate, UITableViewDataSou
                .child("\(String(describing: teaInCart?.tea?.name_en as! String))")
                .setValue([
                             "drinkSize":"\(String(describing: teaInCart?.drinkSize?.rawValue as? String ?? "默认 Default"))",
+                            "name_en":"\("\(String(describing: teaInCart?.tea?.name_en as! String))")",
                             "drinkSugar":"\(String(describing: teaInCart?.drinkSugar?.rawValue as? String ?? "默认 Default"))",
                             "drinkTemp":"\(String(describing: teaInCart?.drinkTemp?.rawValue as? String ?? "默认 Default"))",
                             "addOn":"\(String(describing: teaInCart?.addOn.description as? String ?? " "))",
