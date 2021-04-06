@@ -13,14 +13,16 @@ import FirebaseDatabase
 
 class ShoppingCartVC : UIViewController, UITableViewDelegate, UITableViewDataSource  {
     
+    var orderTotalPrice:Double = 0
     var shoppingList : [CartItem]?
     var orderUID:String!
-    var userCredit:Int = 0
+    var userCredit:String = ""
     var creditDeduction:Bool = false
-    var creditChange:Int = 0
+    var creditChangeTo:Int = 0
     var userID:String = ""
     @IBOutlet weak var confirmButton: UIButton!
     @IBOutlet weak var tableView: UITableView!
+    @IBOutlet weak var orderTotalPriceLabel: UILabel!
     
     // Firebase reference
     let ref = Database.database().reference()
@@ -58,17 +60,17 @@ class ShoppingCartVC : UIViewController, UITableViewDelegate, UITableViewDataSou
                             "payVia":"App_Cash",
             "userEmail":"\( String( UserDefaults.standard.string(forKey: "userEmail")!))",
                             "qNum":"\(qNum)",
-                        "uid":userID
+                            "userID":userID,
+                            "orderID":orderUID
                     ])
         
             // Get the length of the cart list
         let length = shoppingList?.count
-        var orderTotalPrice:Double = 0
+
         
             // 1.2 For each tea in cart, add detail into database
         for index in 0...(length!-1){
             let teaInCart = shoppingList?[index]
-            orderTotalPrice += teaInCart?.totalPrice ?? 0
             ref.child("orderList/\(String(describing: orderUID as! String))")
                .child("drinks")
                .child("\(String(describing: teaInCart?.tea?.name_en as! String))")
@@ -109,7 +111,7 @@ class ShoppingCartVC : UIViewController, UITableViewDelegate, UITableViewDataSou
              }else{
 
                 self.ref.child("userCredits/\(uid)")
-                    .setValue(["credit":0])
+                    .setValue(["credit":"0"])
              }
 
          })
@@ -132,20 +134,47 @@ class ShoppingCartVC : UIViewController, UITableViewDelegate, UITableViewDataSou
     // if enough, adjust the shopping list cart
     // Comprehensively check the credit status
     func comprehensiveCheck() {
+        
         // Make sure this user has credit record
         userMustHasCreditRecord(uid:userID)
         print("userCredits/\(userID)/credit")
-        // Check if user has enough credit to activate deduction
-//        self.ref.child("userCredits/\(userID)/credit")
-//            .observeSingleEvent(of: .value) { (snapshot) in
-//                self.userCredit = snapshot.value as! Int
-//            }
+        
+        // Check how many credits user have
+        self.ref.child("userCredits/\(userID)/credit")
+            .observeSingleEvent(of: .value) { (snapshot) in
+                self.userCredit = snapshot.value as! String
+            }
+        
+        print(self.userCredit)
+        
+        // If the cart has at least 1 item
+        if shoppingList!.count > 0{
+            
+            // if userCredit > 100 then activate the deduction
+            if Int(userCredit)! >= 100{
+                //Re-sort the cart list
+                shoppingList?.sort{ $0.totalPrice! > $1.totalPrice!}
+                // Set the first item's price to 0
+                shoppingList![0].totalPrice = 0
+                // Set deduction to true
+                creditDeduction = true
+                // Calculate the change of credit in this order
+                creditChangeTo = Int(userCredit)! - 100 + (shoppingList!.count-1)*10
+            }else{
+                // Calculate the change of credit in this order
+                creditChangeTo = Int(userCredit)!  + (shoppingList!.count)*10
+            }
+            // calculate the total price of this order base on new list
+            for index in 0...(shoppingList!.count-1){
+                orderTotalPrice += shoppingList![index].totalPrice ?? 0
+            }
+        }
     }
     
     override func viewDidLoad() {
         self.shoppingList = SharedData.shoppingList
         self.userID = Auth.auth().currentUser!.uid
-        print(UserDefaults.standard.string(forKey: "userEmail"))
+//        print(UserDefaults.standard.string(forKey: "userEmail"))
         self.navigationController?.setNavigationBarHidden(false, animated: true)
         
         // If the cart is empty, disable the confirm button
@@ -155,7 +184,7 @@ class ShoppingCartVC : UIViewController, UITableViewDelegate, UITableViewDataSou
         }
         
         comprehensiveCheck()
-        print(self.userCredit)
+        self.orderTotalPriceLabel.text = "$\(orderTotalPrice)"
     }
 
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
