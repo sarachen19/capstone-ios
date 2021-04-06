@@ -622,6 +622,7 @@
                     </view>
                     <tabBarItem key="tabBarItem" title="My Membership" image="person" catalog="system" id="Eeh-wu-klQ"/>
                     <connections>
+                        <outlet property="creditLabel" destination="G6O-Vh-ioG" id="BEa-9n-YBb"/>
                         <outlet property="welcomeLabel" destination="9kT-9K-n2j" id="0sj-Nn-UFn"/>
                     </connections>
                 </viewController>
@@ -727,6 +728,7 @@
                     <navigationItem key="navigationItem" title="My Cart" id="oWx-Wf-Fpf"/>
                     <connections>
                         <outlet property="confirmButton" destination="t6x-0h-Kxx" id="rUD-fr-3Hh"/>
+                        <outlet property="orderTotalPriceLabel" destination="GJ0-yQ-dBV" id="2n4-Nk-FS2"/>
                         <outlet property="tableView" destination="AYB-Eq-iLs" id="wBG-3C-dPZ"/>
                     </connections>
                 </viewController>

@@ -13,14 +13,20 @@ import FirebaseDatabase
 class CreditsInfoVC: UIViewController {
 
     @IBOutlet weak var welcomeLabel: UILabel!
+    @IBOutlet weak var creditLabel: UILabel!
     
+    var userID:String = ""
     let ref = Database.database().reference()
     
     override func viewDidLoad() {
         super.viewDidLoad()
         self.navigationController?.setNavigationBarHidden(true, animated: true)
+        self.userID = Auth.auth().currentUser!.uid
         
-        
+        self.ref.child("userCredits/\(userID)/credit")
+            .observeSingleEvent(of: .value) { (snapshot) in
+                self.creditLabel.text = snapshot.value as! String
+            }
         welcomeLabel.text = UserDefaults.standard.string(forKey: "uid")
         // Do any additional setup after loading the view.
     }
