@@ -15,7 +15,11 @@ class ShoppingCartVC : UIViewController, UITableViewDelegate, UITableViewDataSou
     
     var shoppingList : [CartItem]?
     var orderUID:String!
-    
+    var userCredit:Int = 0
+    var creditDeduction:Bool = false
+    var creditChange:Int = 0
+    var userID:String = ""
+    @IBOutlet weak var confirmButton: UIButton!
     @IBOutlet weak var tableView: UITableView!
     
     // Firebase reference
@@ -53,7 +57,8 @@ class ShoppingCartVC : UIViewController, UITableViewDelegate, UITableViewDataSou
                             "orderTime":"\(dateString)",
                             "payVia":"App_Cash",
             "userEmail":"\( String( UserDefaults.standard.string(forKey: "userEmail")!))",
-                            "qNum":"\(qNum)"
+                            "qNum":"\(qNum)",
+                        "uid":userID
                     ])
         
             // Get the length of the cart list
@@ -96,15 +101,15 @@ class ShoppingCartVC : UIViewController, UITableViewDelegate, UITableViewDataSou
     }
     
     // A function to test if the user already has credit record
-    func userMustHasCreditRecord(userEmail : String) {
-        ref.child("orderList/userCredits").observeSingleEvent(of: .value, with: { (snapshot) in
+    func userMustHasCreditRecord(uid : String) {
+        ref.child("userCredits").observeSingleEvent(of: .value, with: { (snapshot) in
 
-             if snapshot.hasChild("test"){
-
+             if snapshot.hasChild("\(uid)"){
+                
              }else{
 
-                self.ref.child("orderList/userCredits/\(userEmail)")
-                    .setValue(0)
+                self.ref.child("userCredits/\(uid)")
+                    .setValue(["credit":0])
              }
 
          })
@@ -123,11 +128,34 @@ class ShoppingCartVC : UIViewController, UITableViewDelegate, UITableViewDataSou
         return cell
     }
     
+    // Check the credit,  use credit to deduction.
+    // if enough, adjust the shopping list cart
+    // Comprehensively check the credit status
+    func comprehensiveCheck() {
+        // Make sure this user has credit record
+        userMustHasCreditRecord(uid:userID)
+        print("userCredits/\(userID)/credit")
+        // Check if user has enough credit to activate deduction
+//        self.ref.child("userCredits/\(userID)/credit")
+//            .observeSingleEvent(of: .value) { (snapshot) in
+//                self.userCredit = snapshot.value as! Int
+//            }
+    }
+    
     override func viewDidLoad() {
         self.shoppingList = SharedData.shoppingList
+        self.userID = Auth.auth().currentUser!.uid
         print(UserDefaults.standard.string(forKey: "userEmail"))
         self.navigationController?.setNavigationBarHidden(false, animated: true)
-
+        
+        // If the cart is empty, disable the confirm button
+        if self.shoppingList!.count<1{
+            confirmButton.isEnabled = false
+            confirmButton.backgroundColor = UIColor.darkGray
+        }
+        
+        comprehensiveCheck()
+        print(self.userCredit)
     }
 
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {

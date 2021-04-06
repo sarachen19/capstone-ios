@@ -726,6 +726,7 @@
                     </view>
                     <navigationItem key="navigationItem" title="My Cart" id="oWx-Wf-Fpf"/>
                     <connections>
+                        <outlet property="confirmButton" destination="t6x-0h-Kxx" id="rUD-fr-3Hh"/>
                         <outlet property="tableView" destination="AYB-Eq-iLs" id="wBG-3C-dPZ"/>
                     </connections>
                 </viewController>
