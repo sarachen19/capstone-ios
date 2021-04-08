@@ -61,7 +61,8 @@ class ShoppingCartVC : UIViewController, UITableViewDelegate, UITableViewDataSou
             "userEmail":"\( String( UserDefaults.standard.string(forKey: "userEmail")!))",
                             "qNum":"\(qNum)",
                             "userID":userID,
-                            "orderID":orderUID
+                            "orderID":orderUID,
+                            "deduction":creditDeduction
                     ])
         
             // Get the length of the cart list
@@ -81,10 +82,10 @@ class ShoppingCartVC : UIViewController, UITableViewDelegate, UITableViewDataSou
                             "drinkTemp":"\(String(describing: teaInCart?.drinkTemp?.rawValue as? String ?? "默认 Default"))",
                             "addOn":"\(String(describing: teaInCart?.addOn.description as? String ?? " "))",
                             "saySomething":"\(String(describing: teaInCart?.saySomething as? String ?? " "))",
-                            "deduction":"False",
                             "price":"\(String(describing: teaInCart?.totalPrice as? Double ?? 0))",
                             "lastUpdateTime":"\(dateString)",
-                            "currentStatus":"orderPlaced"
+                            "currentStatus":"orderPlaced",
+                            "deducted":"\(String(describing: teaInCart?.tea?.deducted as? String ?? "false"))"
                         ])
         }
         
@@ -97,9 +98,8 @@ class ShoppingCartVC : UIViewController, UITableViewDelegate, UITableViewDataSou
         SharedData.shoppingList.removeAll()
         
         // 3. Modify reward points
-//        userMustHasCreditRecord(userEmail: UserDefaults.standard.string(forKey: "userEmail")!)
-        
-//        self.navigationController!.pushViewController(self.storyboard!.instantiateViewController(withIdentifier: "OrderPlacedVC") as UIViewController, animated: false)
+        ref.child("userCredits/\(userID)/credit")
+           .setValue("\(creditChangeTo)")
     }
     
     // A function to test if the user already has credit record
@@ -141,34 +141,41 @@ class ShoppingCartVC : UIViewController, UITableViewDelegate, UITableViewDataSou
         
         // Check how many credits user have
         self.ref.child("userCredits/\(userID)/credit")
-            .observeSingleEvent(of: .value) { (snapshot) in
+            .observeSingleEvent(of: .value) { [self] (snapshot) in
                 self.userCredit = snapshot.value as! String
+                
+                print(self.userCredit)
+                
+                // If the cart has at least 1 item
+                if self.shoppingList!.count > 0{
+                    
+                    // if userCredit > 100 then activate the deduction
+                    if Int(self.userCredit)! >= 100{
+                        //Re-sort the cart list
+                        self.shoppingList?.sort{ $0.totalPrice! >= $1.totalPrice!}
+                        // Set the first item's price to 0
+                        self.shoppingList![0].totalPrice = 0
+                        // Set the first item deducted to true
+                        self.shoppingList![0].tea?.deducted = true
+                        // Set deduction to true
+                        self.creditDeduction = true
+                        // Calculate the change of credit in this order
+                        creditChangeTo = Int(userCredit)! - 100 + (shoppingList!.count-1)*10
+                    }else{
+                        // Calculate the change of credit in this order
+                        creditChangeTo = Int(userCredit)!  + (shoppingList!.count)*10
+                    }
+                    // calculate the total price of this order base on new list
+                    for index in 0...(shoppingList!.count-1){
+                        orderTotalPrice += shoppingList![index].totalPrice ?? 0
+                    }
+                    
+                    // Display the total price in label
+                    self.orderTotalPriceLabel.text = "$\(orderTotalPrice)"
+                }
             }
         
-        print(self.userCredit)
-        
-        // If the cart has at least 1 item
-        if shoppingList!.count > 0{
-            
-            // if userCredit > 100 then activate the deduction
-            if Int(userCredit)! >= 100{
-                //Re-sort the cart list
-                shoppingList?.sort{ $0.totalPrice! > $1.totalPrice!}
-                // Set the first item's price to 0
-                shoppingList![0].totalPrice = 0
-                // Set deduction to true
-                creditDeduction = true
-                // Calculate the change of credit in this order
-                creditChangeTo = Int(userCredit)! - 100 + (shoppingList!.count-1)*10
-            }else{
-                // Calculate the change of credit in this order
-                creditChangeTo = Int(userCredit)!  + (shoppingList!.count)*10
-            }
-            // calculate the total price of this order base on new list
-            for index in 0...(shoppingList!.count-1){
-                orderTotalPrice += shoppingList![index].totalPrice ?? 0
-            }
-        }
+
     }
     
     override func viewDidLoad() {
@@ -184,7 +191,7 @@ class ShoppingCartVC : UIViewController, UITableViewDelegate, UITableViewDataSou
         }
         
         comprehensiveCheck()
-        self.orderTotalPriceLabel.text = "$\(orderTotalPrice)"
+
     }
 
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {

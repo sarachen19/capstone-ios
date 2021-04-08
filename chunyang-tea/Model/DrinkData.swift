@@ -20,6 +20,7 @@ class DrinkData {
     var isCanAddBlackBubble: Bool
     var isSugarFixed: Bool
     var isPopular: Bool
+    var deducted:Bool
     
     init(name_en: String, description : String, imageUrl : String, priceM : Double,maxCalorieM: Int, priceL : Double, maxCalorieL : Int, isCanAddWhiteBubble:Bool, isCanAddBlackBubble : Bool, isSugarFixed : Bool, isPopular:Bool ) {
         self.name_en = name_en
@@ -33,5 +34,6 @@ class DrinkData {
         self.isCanAddBlackBubble = isCanAddBlackBubble
         self.isSugarFixed = isSugarFixed
         self.isPopular = isPopular
+        self.deducted = false
     }
     }
