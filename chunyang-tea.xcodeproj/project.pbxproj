@@ -7,9 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		154D2F22261F7CC600144688 /* TrackOrderVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 154D2F21261F7CC600144688 /* TrackOrderVC.swift */; };
-		154D2F24261F7DC700144688 /* Order.swift in Sources */ = {isa = PBXBuildFile; fileRef = 154D2F23261F7DC700144688 /* Order.swift */; };
-		154D2F26261F8A2900144688 /* TrackOrderCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 154D2F25261F8A2900144688 /* TrackOrderCell.swift */; };
 		1555CE1325CB556100B71D0E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1555CE1225CB556100B71D0E /* AppDelegate.swift */; };
 		1555CE1525CB556100B71D0E /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1555CE1425CB556100B71D0E /* SceneDelegate.swift */; };
 		1555CE1725CB556100B71D0E /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1555CE1625CB556100B71D0E /* ViewController.swift */; };
@@ -37,9 +34,6 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		154D2F21261F7CC600144688 /* TrackOrderVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrackOrderVC.swift; sourceTree = "<group>"; };
-		154D2F23261F7DC700144688 /* Order.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Order.swift; sourceTree = "<group>"; };
-		154D2F25261F8A2900144688 /* TrackOrderCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrackOrderCell.swift; sourceTree = "<group>"; };
 		1555CE0F25CB556100B71D0E /* chunyang-tea.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "chunyang-tea.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		1555CE1225CB556100B71D0E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		1555CE1425CB556100B71D0E /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -129,7 +123,6 @@
 				15EC5A7F25CC71B6008BCF50 /* ShoppingCartVC.swift */,
 				A2E2E37725DFB4E3006978FB /* OrderPlacedVC.swift */,
 				A2403BC325E925EA00B7E1C1 /* CreditsInfoVC.swift */,
-				154D2F21261F7CC600144688 /* TrackOrderVC.swift */,
 			);
 			path = VC;
 			sourceTree = "<group>";
@@ -140,7 +133,6 @@
 				15EC5A7D25CC5552008BCF50 /* OptionCheckCell.swift */,
 				15EC5A7B25CC54DB008BCF50 /* OptionSelectCell.swift */,
 				15EC5A7725CC3CF9008BCF50 /* MenuTableViewCell.swift */,
-				154D2F25261F8A2900144688 /* TrackOrderCell.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -161,7 +153,6 @@
 				15EC5A7125CBB421008BCF50 /* Enums.swift */,
 				15EC5A6F25CBB421008BCF50 /* CartItem.swift */,
 				15EC5A6D25CBB421008BCF50 /* PostOrder.swift */,
-				154D2F23261F7DC700144688 /* Order.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -329,8 +320,6 @@
 				15EC5A6925CBADD2008BCF50 /* FirebaseHelper.swift in Sources */,
 				15EC5A7825CC3CF9008BCF50 /* MenuTableViewCell.swift in Sources */,
 				1555CE1725CB556100B71D0E /* ViewController.swift in Sources */,
-				154D2F22261F7CC600144688 /* TrackOrderVC.swift in Sources */,
-				154D2F24261F7DC700144688 /* Order.swift in Sources */,
 				15EC5A7425CBB421008BCF50 /* CartItem.swift in Sources */,
 				15EC5A7C25CC54DB008BCF50 /* OptionSelectCell.swift in Sources */,
 				1555CE1325CB556100B71D0E /* AppDelegate.swift in Sources */,
@@ -344,7 +333,6 @@
 				15EC5A7525CBB421008BCF50 /* DrinkData.swift in Sources */,
 				15EC5A5225CB728A008BCF50 /* MenuVC.swift in Sources */,
 				15EC5A6725CBA6C9008BCF50 /* CoreDataManager.swift in Sources */,
-				154D2F26261F8A2900144688 /* TrackOrderCell.swift in Sources */,
 				15EC5A7A25CC4D68008BCF50 /* DetailVC.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
