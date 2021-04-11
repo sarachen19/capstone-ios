@@ -22,10 +22,10 @@ class OrderPlacedVC: UIViewController{
     
     // When user click DONE, close this view and return to Menu VC.
     @IBAction func toMenuVC(_ sender: Any) {
-        self.dismiss(animated: true) {
-            self.navigationController!.pushViewController(self.storyboard!.instantiateViewController(withIdentifier: "menuVC") as UIViewController, animated: true)
+        self.dismiss(animated: true)
+//            self.navigationController!.pushViewController(self.storyboard!.instantiateViewController(withIdentifier: "menuVC") as UIViewController, animated: true)
         }
-    }
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
