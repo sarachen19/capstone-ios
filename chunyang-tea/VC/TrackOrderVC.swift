@@ -23,7 +23,9 @@ class TrackOrderVC: ViewController, UITableViewDelegate, UITableViewDataSource {
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "trackOrderCell", for: indexPath) as! TrackOrderCell
         let order = self.orders[indexPath.row]
-        cell.cellNameLbl?.text = order.orderTime
+        var time = order.orderTime;
+        time = time.components(separatedBy: " ")[0]
+        cell.cellNameLbl?.text = time
         cell.cellDescLbl?.text = order.status
         cell.cellPriceLbl?.text = order.orderTotalPrice
 
@@ -31,8 +33,12 @@ class TrackOrderVC: ViewController, UITableViewDelegate, UITableViewDataSource {
         return cell;
     }
     
+    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        return 150
+    }
+    
     func scrollViewWillBeginDragging(_ scrollView: UIScrollView) {
-        self.orders = []
+        //self.orders = []
         readListData();
         
     }
@@ -47,6 +53,7 @@ class TrackOrderVC: ViewController, UITableViewDelegate, UITableViewDataSource {
     }
     
     func readListData() {
+        var temp : [Order] = []
         ref = Database.database().reference()
         if ref != nil {
             ref!.child("orderList").observeSingleEvent(of: .value, with: { (snapshot) in
@@ -61,9 +68,10 @@ class TrackOrderVC: ViewController, UITableViewDelegate, UITableViewDataSource {
                     
                     if userEmail ==  self.email{
                         let order : Order = Order(userEmail:userEmail, status:status, orderTotalPrice:orderTotalPrice, orderTime:orderTime);
-                        self.orders.append(order);
+                        temp.append(order);
                     }
                 }
+                self.orders = temp
                 DispatchQueue.main.async { self.table.reloadData(); }
               // ...
               }) { (error) in

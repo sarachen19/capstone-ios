@@ -73,14 +73,13 @@ class MenuVC : UIViewController, FUIAuthDelegate, UITableViewDelegate, UITableVi
 //    }
     
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        return 400
+        return 300
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "teaListCell", for: indexPath) as! MenuTableViewCell
         let tea = self.teaList[indexPath.row]
         cell.cellNameLbl!.text = tea.name_en
-        cell.cellDescLbl!.text = tea.description
         cell.cellPriceLbl!.text = "\(tea.priceM) + "
         FirebaseHelper.shared.getImageData(url: tea.imageUrl) { (data) in
             if let data = data {
