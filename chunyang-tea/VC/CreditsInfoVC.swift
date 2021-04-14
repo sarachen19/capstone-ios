@@ -18,19 +18,24 @@ class CreditsInfoVC: UIViewController {
     var userID:String = ""
     let ref = Database.database().reference()
     
+    func getInfo() {
+        
+        self.ref.child("userCredits/\(userID)/credit")
+            .observeSingleEvent(of: .value) { (snapshot) in
+                self.creditLabel.text = snapshot.value as? String ?? "0"
+            }
+    }
     override func viewDidLoad() {
         super.viewDidLoad()
         self.navigationController?.setNavigationBarHidden(true, animated: true)
         self.userID = Auth.auth().currentUser!.uid
-        
-        self.ref.child("userCredits/\(userID)/credit")
-            .observeSingleEvent(of: .value) { (snapshot) in
-                self.creditLabel.text = snapshot.value as! String
-            }
+        getInfo()
         welcomeLabel.text = UserDefaults.standard.string(forKey: "uid")
         // Do any additional setup after loading the view.
     }
-    
+    override func viewDidAppear(_ animated: Bool) {
+        getInfo()
+    }
 
     /*
     // MARK: - Navigation

@@ -142,7 +142,7 @@ class ShoppingCartVC : UIViewController, UITableViewDelegate, UITableViewDataSou
         // Check how many credits user have
         self.ref.child("userCredits/\(userID)/credit")
             .observeSingleEvent(of: .value) { [self] (snapshot) in
-                self.userCredit = snapshot.value as! String
+                self.userCredit = snapshot.value as? String ?? "0"
                 
                 print(self.userCredit)
                 
